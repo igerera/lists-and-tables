@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>1.2 Списки и таблицы</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-4x3.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <link rel="stylesheet" href="css/prism-fix.css">
+  <link rel="stylesheet" href="css/netology.css">
+  <link rel="stylesheet" href="css/fake-browser.css">
+  <link rel="stylesheet" href="css/react.css">
+  <link rel="stylesheet" href='css/added-styles.css'>
+  <link rel="shortcut icon" href="i/favicon.ico" type="image/x-icon">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Списки и таблицы</h1>
+    <p>Антон Варнавский</p>
+  </header>
+
+  <section class="slide" id="cover">
+    <h2>Списки и таблицы</h2>
+    <p>
+      <img src="pic/avarnauski.jpg" alt="А. Варнавский" class="avatar">
+      Антон Варнавский <span class="position">BRAIN IT</span>
+    </p>
+  </section>
+
+  <section class="slide author contacts" id="author">
+    <img src="pic/avarnauski.jpg" alt="А. Варнавский">
+    <h1>Антон Варнавский</h1>
+    <p class="position">Team Lead в Brain IT</p>
+    <ul class="contacts">
+      <li><a href="mailto:anton.varnauski@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>anton.varnauski@gmail.com </a></li>
+      <li><a href="skype:anton_varnavskiy"><i class="fa fa-skype" aria-hidden="true"></i>anton_varnavskiy</a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>План занятия</h2>
+    <ol>
+      <li><a href="#point-1">Списки</a>
+        <ul>
+          <li><a href="#point-1.1">Виды списков</a></li>
+          <li><a href="#point-1.2">Синтаксис</a></li>
+          <li><a href="#point-1.3">Маркированные списки</a></li>
+          <li><a href="#point-1.4">Списки описаний</a></li>
+          <li><a href="#point-1.5">Изменяем нумерацию упорядоченного списка</a></li>
+          <li><a href="#point-1.6">Многоуровневые списки</a></li>
+        </ul>
+      </li>
+      <li><a href="#point-2">Таблицы</a>
+        <ul>
+          <li><a href="#point-2.1">Синтаксис</a></li>
+          <li><a href="#point-2.1">Атрибуты</a></li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide" id="point-1">
+    <h2 class="slide-caption">Списки</h2> 
+  </section>
+
+  <section class="slide blockquote">
+    <p><blockquote><strong>Список в типографике</strong> — способ оформления различного рода перечислений или перечней. Каждый элемент списка начинается с маркера списка или номера-буквы, и весь текст списка не должен выступать влево за них.</blockquote></p>
+    <img src="../lists-and-tables-slave/res/bat-list.png" alt=""><a href="https://ru.wikipedia.org/wiki/Список_%28типографика%29">Википедия</a>
+  </section>
+
+  <section class="slide">
+    <h2>Разновидности списков</h2>
+    <p>Списки могут быть:</p>
+    <ul>
+      <li><strong>Упорядоченные или неупорядоченные.</strong> Если последовательность перечисленных элементов не зависит от какого-то определенного логического порядка, то такой список является упорядоченным. Если же от перестановки перечисленных элементов изменяется смысл, то такой список называется упорядоченным;</li>
+      <li><strong>Нумерованные и ненумерованные.</strong> Каждый элемент нумерованного списка начинается с порядкового номера или буквы в алфавитном порядке. Элемент ненумерованного списка начинается c маркера списка;</li>
+      <li><strong>Одноуровневые (простые) или многоуровневые.</strong></li>
+    </ul>
+  </section>
+
+  <section class="slide" id="point-1.1">
+    <h2>Виды списков</h2>
+    <p>В вебе выделяют три основных вида списков:</p>
+    <ol>
+      <li>Маркированные списки</li>
+      <li>Нумерованные списки</li>
+      <li>Списки описаний</li>
+    </ol>
+    <p>Разница между ними в смысловой нагрузке. Правильно подбирайте список исходя из контента.</p>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>Если в списке важна <strong>последовательность действий</strong>, например расписание занятий на день, то вам подойдут <strong>нумерованные списки</strong>.<br>
+Если нужно перечислить несколько пунктов без четкой их последовательности, например, <strong>список покупок</strong>, то можно выбрать <strong>маркированный список</strong>.<br>
+В случае, когда требуется оформить <strong>несколько определений</strong> и дать им описание, <strong>подойдет список описаний</strong>.</p>
+    <p>У списков есть стили по умолчанию. Визуально текст отбивается пустой строкой до начала и пустой строкой после окончания. Поэтому в тексте он выделяется.
+Все пункты списка визуально немного смещены относительно левого края всего остального текста, и перед каждым пунктом появляется либо маркер (по умолчанию черная точка), либо номер. Это привлекает внимание читателя к тексту и повышает его читабельность.</p>
+  </section>
+
+  <section class="slide" id="point-1.2">
+    <h2>Синтаксис</h2>
+    <h3>Общее</h3>
+    <p>Во всех видах списков общим является то, что вложить внутрь родительского тега можно только теги пунктов списка. Внутрь тегов пунктов списка уже можно вкладывать какие угодно теги, в том числе и другие списки.</p>
+  </section>
+
+  <section class="slide" id="point-1.3">
+    <h2>Маркированные списки</h2>
+    <p><strong>Ненумерованный список</strong></p>
+    <p>
+      <mark class="highliter"><em>ul</em></mark> — родительский тег. Все списки начинаются с него. Это парный тег.<br>
+      <mark class="highliter"><em>UL</em></mark> = Unordered List — неупорядоченный список.<br>
+      <mark class="highliter"><em>li</em></mark> — тег пункта списка. Парный тег.<br>
+      <mark class="highliter"><em>LI</em></mark> = List Item — элемент списка.
+    </p>
+  </section>
+
+  <section class="slide">
+    <h2>Пример структуры простого маркированного списка</h2>
+    <p>Представим ситуацию: нам на странице нужно перечислить список продуктов, которые понадобятся, чтобы приготовить пиццу.</p>
+    <p>Мы понимаем, что нам нужно использовать список — так будет нагляднее и понятнее, чем перечислить все в строку. А также будет удобно распечатать страницу и отмечать то, что уже есть.</p>
+    <p>Какой список выбрать? В этом случае порядок покупки продуктов не важен. Главное — перечислить их все. Значит, подойдет маркированный список.</p>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>Отлично. На странице в тексте, где должен быть список, мы добавляем родительский тег списка. Поскольку список маркированный, то это будет <mark class="highliter">ul</mark>.</p>
+    <p>Каждый продукт должен идти отдельным пунктом списка. Это значит, что каждый продукт мы должны разместить между <mark class="highliter">&lt;li&gt;</mark> и <mark class="highliter">&lt;/li&gt;</mark> — в тексте напротив поставится точка, и после будет перенос строки.</p>
+    <p>В итоге разметка для нашего списка покупок будет выглядеть так:</p>
+    <pre><code class="language-html line-numbers">
+      &lt;ul&gt; 
+        &lt;li&gt;Тесто для пиццы&lt;/li&gt; 
+        &lt;li&gt;Начинка&lt;/li&gt; 
+        &lt;li&gt;Соус&lt;/li&gt; 
+        &lt;li&gt;Сыр&lt;/li&gt; 
+      &lt;/ul&gt;
+    </code></pre>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p><strong>Ненумерованный список</strong></p>
+    <p>
+      <mark class="highliter"><em>ol</em></mark> — родительский тег. Парный тег.<br>
+      <mark class="highliter"><em>OL</em></mark> = Ordered List — упорядоченный список.<br>
+      <mark class="highliter"><em>li</em></mark> — тег пункта списка.<br>
+    </p>
+  </section>
+
+  <section class="slide">
+    <h2>Пример структуры простого списка</h2>
+    <p>Продолжим писать контент для страницы о приготовлении пиццы. Теперь нам нужно оформить рецепт приготовления. Очевидно, что тут нам тоже пригодится список.</p>
+    <p>Действия обязательно делать в определенном порядке, нельзя положить тесто сверху на сыр. Значит, нам нужен нумерованный список.</p>
+    <p>Как и в предыдущем случае, каждое действие нужно разместить в отдельном пункте списка, чтобы напротив автоматически проставилась цифра.</p>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>В нужном месте текста обозначаем, что здесь будет список — открываем тег <mark class="highliter">&lt;ol&gt;</mark>. Дальше размещаем все нужные нам пункты, оборачивая текст в теги <mark class="highliter">&lt;li&gt;</mark>.</p>
+    <p>Значит, наша разметка будет выглядеть следующим образом:</p>
+    <pre><code class="language-html line-numbers">
+      &lt;ol&gt; 
+        &lt;li&gt;Включить духовку на разогрев&lt;/li&gt; 
+        &lt;li&gt;Раскатать тесто толщиной 5мм&lt;/li&gt; 
+        &lt;li&gt;Выложить соус и начинку&lt;/li&gt; 
+        &lt;li&gt;Посыпать сыром&lt;/li&gt; 
+        &lt;li&gt;Поставить в духовку на 7 минут&lt;/li&gt;
+      &lt;/ol&gt;
+    </code></pre>
+  </section>
+
+  <section class="slide" id="point-1.4">
+    <h2></h2>
+    <p><strong>Списки описаний</strong></p>
+    <p>В этом типе списков структура чуть сложнее, чем у предыдущих. Здесь используются три тега: родительский, тег термина и тег определения.</p>
+    <p>
+      <mark class="highliter"><em>dl</em></mark> — родительский парный тег.<br>
+      <mark class="highliter"><em>DL</em></mark> = Description List — список описаний.<br>
+      <mark class="highliter"><em>dt</em></mark> — тег, в который заключается термин, парный.<br>
+      <mark class="highliter"><em>DT</em></mark> = Definition Term — термин.<br>
+      <mark class="highliter"><em>dd</em></mark> — тег, в котором размещается определение для термина.<br>
+      <mark class="highliter"><em>DD</em></mark> = Description — описание.<br>
+    </p>
+  </section>
+
+  <section class="slide">
+    <h2>Пример структуры простого списка</h2>
+    <p>Теперь мы хотим разобраться с видами пиццы и начинок для нее. У пиццы есть общепринятые названия, нам нужно дать расшифровку каждого.<br> Для этого отлично подойдет список описаний.</p> 
+  </section>
+
+  <section class="slide font-token-minimize">
+    <h2></h2>
+    <p>В нужном месте текста мы обозначаем, что здесь будет список. Открываем тег <mark class="highliter">&lt;dl&gt;</mark>.</p>
+    <p>Далее нам нужно написать название пиццы. Для этого используем тег термина и помещаем внутрь наше слово. Вот так <mark class="highliter">&lt;dt&gt;Пепперони&lt;/dt&gt;</mark>.</p>
+    <p>После мы даем расшифровку этого термина и пишем внутри тега <mark class="highliter">&lt;dd&gt;</mark>.</p>
+    <pre><code class="language-html line-numbers">
+      &lt;dl&gt;
+        &lt;dt&gt;Пепперони&lt;/dt&gt;
+        &lt;dd&gt;Пицца, главный ингредиент которой это одноименная острая вяленая колбаса «Пепперони».&lt;/dd&gt;
+        &lt;dt&gt;Маргарита&lt;/dt&gt;
+        &lt;dd&gt;Лаконичная пицца, которая содержит только томаты, сыр и базилик.&lt;/dd&gt;
+        &lt;dt&gt;Гавайская&lt;/dt&gt;
+        &lt;dd&gt;Пицца с ананасом для тех, кто понимает.&lt;/dd&gt;
+      &lt;/dl&gt;
+    </code></pre>
+  </section>
+
+  <section class="slide" id="point-1.5">
+    <h2>Изменяем нумерацию упорядоченного списка</h2>
+    <p>Вернемся к нашему списку действий в рецепте приготовления. Важно отметить, что начинка должна быть уже готовой к употреблению.</p>
+    <p>Мы понимаем, что нам нужно разорвать список, вставить текст, а потом снова продолжить список. Если мы просто разорвем список, а потом откроем новый, то второй список снова начнется с единицы.<br>Что же делать?</p>
+  </section>
+
+  <section class="slide font-token-minimize">
+    <h2></h2>
+    <p>Нужно начать нумерованный список не с единицы. На этот случай вы можете использовать html-атрибут <mark class="highliter">start</mark>.</p>
+    <pre><code class="language-html line-numbers">
+      &lt;ol&gt;
+        &lt;li&gt;Включить духовку на максимальную мощность&lt;/li&gt;
+        &lt;li&gt;Раскатать тесто толщиной 5мм&lt;/li&gt;
+        &lt;li&gt;Выложить соус и начинку&lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;p&gt;Пицца печется очень быстро, сырые продукты не успеют приготовиться. Начинка должна быть готовой.&lt;/p&gt;
+      &lt;ol start="4"&gt;
+        &lt;li&gt;Выложить сыр&lt;/li&gt;
+        &lt;li&gt;Поставить пиццу в духовку на 7 минут&lt;/li&gt;
+      &lt;/ol&gt;
+    </code></pre>
+    <p>В качестве значения атрибута указываем число, с которого нужно начать этот конкретный список.</p>
+  </section>
+
+  <section class="slide" id="point-1.6">
+    <h2>Многоуровневые списки</h2>
+    <p>Отдельно стоит остановится на списках, состоящих из нескольких уровней.</p>
+    <p>В процессе создания многоуровнего списка стоит помнить о правиле, что в списке могут быть только пункты списка. Это значит, что второй и все следующие уровни списка нужно поместить внутрь пункта предыдущего списка.</p>
+    <p>Вы можете комбинировать нумерованные и маркированные списки при вложении.</p>
+    <p>Давайте приведем примеры начинок, чтобы не растеряться в магазине. Мы понимаем, что нам нужно поместить список в список. Ингредиенты можно брать в любом порядке, поэтому можно отразить их при помощи маркированного списка.</p>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>Чтобы создать второй уровень списка, в нужном пункте первого списка мы открываем новый список.<br> В нашем случае это ненумерованный список — используем <mark class="highliter">&lt;ul&gt;</mark>.</p>
+    <p>Дальше размещаем информацию об ингредиентах — каждый продукт в новый пункт.</p>
+    <p>Когда все необходимое перечислено — <span class="letter-compressed">закрываем второй уровень списка — </span><mark class="highliter">&lt;/ol&gt;</mark>.</p>
+    <p>И теперь закрываем пункт первого списка — <mark class="highliter">&lt;/li&gt;</mark>.</p>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p><strong>Результат:</strong></p>
+    <pre><code class="language-html line-numbers">
+      &lt;ul&gt; 
+        &lt;li&gt;Тесто для пиццы&lt;/li&gt; 
+        &lt;li&gt;Начинка на выбор:
+            &lt;ul&gt;
+              &lt;li&gt;Томаты;&lt;/li&gt;
+              &lt;li&gt;Маринованные огурцы;&lt;/li&gt;
+              &lt;li&gt;Колбаса;&lt;/li&gt;
+              &lt;li&gt;Грибы;&lt;/li&gt;                             
+              &lt;li&gt;Маслины.&lt;/li&gt;         
+            &lt;/ul&gt;
+        &lt;/li&gt; 
+        &lt;li&gt;Соус&lt;/li&gt; 
+        &lt;li&gt;Сыр&lt;/li&gt; 
+      &lt;/ul&gt;
+    </code></pre>
+  </section>
+
+  <section class="slide" id="point-2">
+    <h2 class="slide-caption">Таблицы</h2> 
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>Нужно подсчитать, сколько денег было потрачено  на приготовление пиццы. На странице должны быть следующие данные: название продукта, страна производитель, стоимость.</p>
+    <p>Мы понимаем, что списком такую информацию не оформишь, будет очень неудобно, например, считать итоговую сумму.</p>
+    <p>Лучше всего для этих целей подойдет таблица. Все данные о продукте находятся в одной строке — удобно искать и считать. Каждая колонка в таблице может иметь заголовок — просто будет определить, что значит текст/цифра, расположенные в ячейке.</p>   
+  </section>
+
+  <section class="slide" id="point-2.1">
+    <h2>Синтаксис</h2>
+    <p>Таблица всегда состоит из строк и ячеек в строке.</p>
+    <p>В нужном месте страницы мы создаем таблицу при помощи парного родительского тега <mark class="highliter">table</mark>.
+Затем внутрь таблицы помещается необходимое количество строк при помощи парного тега <mark class="highliter">tr</mark>.<br>
+<mark class="highliter">TR</mark> расшифровывается как <mark class="highliter">table row</mark> — срока таблицы.</p>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>В каждой строке может лежать любое (нужное вам) количество ячеек. Ячейки бывают двух типов:</p>
+    <ul>
+      <li><mark class="highliter">th</mark> — для заголовков колонки. <mark class="highliter">TH</mark> — <mark class="highliter">table header cell</mark> — ячейка «шапки» таблицы. Текст в такой ячейке отображается жирным шрифтом и выравнивается по центру.</li>
+      <li><mark class="highliter">td</mark> — для всех остальных ячеек. <mark class="highliter">TD</mark> — <mark class="highliter">table data cells</mark> — ячейка данных таблицы.</li>
+    </ul>
+    <p>Сколько ячеек вы разместите в ряду, столько колонок у вас получится. Важно помещать одинаковое количество ячеек в каждую строку для правильного внешнего вида таблицы и состыковки данных по вертикали и горизонтали.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Стандартная структура</h2>
+    <p>Давайте разместим данные в таблице.<br> Всего из магазина мы принесли 6 различных продуктов. Это значит, что нам нужно создать 6 строк.</p>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>Открываем таблицу при помощи родительского тега <mark class="highliter">table</mark> и размещаем внутри 6 строк — тегов <mark class="highliter">tr</mark>. Внутри строк ничего писать не нужно. Все данные будут лежать в ячейках, находящихся в строке.</p>
+    <pre><code class="language-html line-numbers">
+      &lt;table&gt;
+        &lt;tr&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;/tr&gt; 
+        &lt;tr&gt;&lt;/tr&gt; 
+        &lt;tr&gt;&lt;/tr&gt; 
+        &lt;tr&gt;&lt;/tr&gt;   
+        &lt;tr&gt;&lt;/tr&gt; 
+        &lt;tr&gt;&lt;/tr&gt; 
+        &lt;tr&gt;&lt;/tr&gt; 
+      &lt;/table&gt;
+    </code></pre>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>Далее в каждой строке нам нужно создать 3 ячейки — с названием продукта, страной, стоимостью:</p>
+    <a href="https://codepen.io/wizjer/pen/QrRBPO?editors=1000">Пример 1</a>
+    <div class="gap-50"></div>
+    <p>И наконец, заполним таблицу данными:</p>
+    <a href="https://codepen.io/wizjer/pen/NMVBQa?editors=1000">Пример 2</a>
+  </section>
+
+  <section class="slide">
+    <h2>Заголовки колонок</h2>
+    <p>Отлично, мы внесли данные в таблицу. Но через неделю нам уже не вспомнить, что за цифра в последней колонке — масса это или цена? Нужно подписать колонки и обозначить, что за данные в каждой из них находятся.</p>
+    <p>Чтобы создать строку с заголовками колонок и отделить эту строку от основных данных таблицы используется парный тег <mark class="highliter">thead</mark> — <mark class="highliter">table head</mark>.</p>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p><mark class="highliter">thead</mark> следует использовать в самом начале таблицы. Что логично, поскольку заголовки колонок должны располагаться сверху. Допускается использование не более одного thead в пределах одной таблицы.
+Тег должен идти в разметке сразу после тега <mark class="highliter">table</mark>. Внутрь вкладывается тег ряда — <mark class="highliter">tr</mark>, а в него теги ячеек — <mark class="highliter">td</mark>.</p>
+    <p>Давайте зададим заголовки нашим колонкам:</p>
+    <a href="https://codepen.io/wizjer/pen/ELzeVz?editors=1000">Пример 3</a>
+  </section>
+
+  <section class="slide">
+    <h2>Тело таблицы</h2>
+    <p>После <mark class="highliter">thead</mark> должен идти основной контент таблицы. Его так же группируют по смыслу, для этого используется парный тег <mark class="highliter">tbody</mark> —<br><mark class="highliter">table body</mark>.</p>
+    <p>Тел таблицы может быть много. Например, мы можем разбить продукты по магазинам, где они были куплены.</p>
+    <a href="https://codepen.io/wizjer/pen/wjbEpm?editors=1000">Пример 4</a>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>Теперь нам нужно подвести итог и посчитать, сколько всего было потрачено денег.</p>
+    <p>Вы наверняка не раз видели таблицы с расчетами, где в нижней строке выводится сумма или какой-то вывод из приведенных выше цифр. Именно для таких строк ИТОГО используется парный тег <mark class="highliter">tfoot</mark> —<br> <mark class="highliter">table footer</mark>. Синтаксис его использования ничем не отличается от предыдущих логических элементов <mark class="highliter">thead</mark> и <mark class="highliter">tbody</mark>.</p>
+    <p>Давайте подсчитаем и выведем общую сумму:</p>
+    <a href="https://codepen.io/wizjer/pen/bMyxLM?editors=1000">Пример 5</a>
+  </section>
+
+  <section class="slide" id="point-2.2">
+    <h2>Атрибуты</h2>
+    <p>Мы видим, что в строках с названиями магазинов у нас есть пустые ячейки. Та же ситуация в последней строке ИТОГО. Почему бы не объединить пустые ячейки? Так таблица станет более читаемой.</p>
+    <p>Что делать, если нам нужно объединить несколько ячеек по горизонтали?
+Без паники! Все придумано до нас. Для этих целей используются специальные html-атрибуты <mark class="highliter">colspan</mark>.</p>
+    <p><mark class="highliter">span</mark> дословно переводится как «охват». Это хорошо объясняет, что именно делают атрибуты.
+Если мы укажем у тега <mark class="highliter">td</mark> атрибут <mark class="highliter">colspan</mark> и в значении напишем 3, то ячейка растянется, охватит собою место под 3 ячейки.</p>
+    <p>Значением этих атрибутов может быть только целое положительное число.</p>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>Так как одна ячейка может занимать несколько позиций в строке или в столбце, или и там и там одновременно, то важно следить за суммарным количеством ячеек в строках и столбцах с учетом охвата.</p>
+    <p>Это схоже с тем, как работает кнопка <img src="../lists-and-tables-slave/res/button.png" alt=""> в Excel.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Пример с использованием <mark class="highliter"><span class="lowercase">colspan</span></mark></strong></h2>
+    <p>Давайте объединим пустые ячейки в строках с названиями магазинов и в последней строке с итоговым количеством баллов:</p>
+    <a href="https://codepen.io/wizjer/pen/ZoNMLw?editors=1000">Пример 5</a>
+  </section>
+
+  <section class="slide">
+    <h2></h2>
+    <p>Поскольку все купленные на рынке продукты приехали к нам из Казахстана, то мы можем объединить обе ячейки в одну по высоте.<br> Для этого используется атрибут <mark class="highliter">rowspan</mark>:</p>
+    <a href="https://codepen.io/wizjer/pen/jxovdd?editors=1000">Пример 6</a>
+    <div class="gap-50"></div>
+    <p>Как вы, возможно, заметили, в строках не хватает ячеек. Причина в том, что для охвата нужно будет освободить место. По факту атрибуты не склеивают ячейки по ширине или высоте. Они растягивают одну ячейку на указанное количество строк или колонок. Соответственно, для того чтобы таблица не развалилась, нужно освободить место под это растягивание.</p>
+    <p>Ура! Мы отлично справились с контентом на странице о приготовлении пиццы. А также выучили три вида списков и таблицы.</p>
+  </section>
+
+  <section class="slide last author contacts">
+    <p class="thanx">Задавайте вопросы и напишите отзыв о лекции!</p>
+    <h1>Антон Варнавский</h1>
+    <ul class="contacts">
+      <li><a href="mailto:anton.varnauski@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>anton.varnauski@gmail.com </a></li>
+      <li><a href="skype:anton_varnavskiy"><i class="fa fa-skype" aria-hidden="true"></i>anton_varnavskiy</a></li>
+    </ul>
+  </section>
+  <div class="progress"></div>
+  <script src="node_modules/shower-core/shower.min.js"></script>
+  <script src="js/prism.js?v=2"></script>
+  <script src="js/prism-react.js"></script>
+  <script src="https://use.fontawesome.com/30b5a52164.js"></script>
+
+</body>
+</html>
